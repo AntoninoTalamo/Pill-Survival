@@ -768,13 +768,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506451554}
-  m_LocalRotation: {x: 0.00000005973704, y: -0.70710623, z: 0.7071074, w: 0.000000044739554}
-  m_LocalPosition: {x: 4.9, y: 37.3, z: 6.4}
+  m_LocalRotation: {x: 0.00000004612213, y: -0.8660248, z: 0.5000012, w: 0.000000058676147}
+  m_LocalPosition: {x: 5, y: 28.3, z: 21.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 120, y: 0, z: 180}
 --- !u!1 &1682650240
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,10 +904,10 @@ RectTransform:
   m_Father: {fileID: 1881873375}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -880, y: -525}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.24074998, y: 0.08251852}
+  m_AnchoredPosition: {x: -0.5352783, y: -1.2878418}
+  m_SizeDelta: {x: -1.0705872, y: -2.5756836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1692274036
 MonoBehaviour:
@@ -1306,20 +1306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PossibleUpgrades:
-  - {fileID: 11400000, guid: e0c33e4bcce356545af923b92ccfd47f, type: 2}
-  - {fileID: 11400000, guid: 624cb8cb1432ea1438427d8fc1667b3c, type: 2}
-  - {fileID: 11400000, guid: ddf9ddb266e4e9749b34694d4bce4f0d, type: 2}
   - {fileID: 11400000, guid: 9a9eab10b6226c44280044c140587a40, type: 2}
-  - {fileID: 11400000, guid: 7560f8b91386f384ebe00647d5deac77, type: 2}
-  - {fileID: 11400000, guid: 937e0c05ac14be94bb0282cf1ef76d26, type: 2}
-  - {fileID: 11400000, guid: d0642203fc994c4469495212e3a2c421, type: 2}
-  - {fileID: 11400000, guid: a153695aae2a81343823a2d5c3b9d548, type: 2}
-  - {fileID: 11400000, guid: 13668e6be2f31424197c6ff800ebc8c4, type: 2}
-  - {fileID: 11400000, guid: 31b8e98b7739e77438db21f0342f4721, type: 2}
-  - {fileID: 11400000, guid: dd8531a6713453340a83ff52926dc931, type: 2}
-  - {fileID: 11400000, guid: f9edf59d5b01be04ca25c4a4805560e8, type: 2}
-  - {fileID: 11400000, guid: b7c11e50b3dea5e4e95a5a8a59c8c9eb, type: 2}
-  - {fileID: 11400000, guid: 309946128dc971348b385b2f63cc7967, type: 2}
   toApplyTo: {fileID: 353782802}
 --- !u!1001 &1915089709
 PrefabInstance:
