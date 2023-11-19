@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb2d11a0949792f4192bd59ac48e963e, type: 3}
+  m_Name: (13) Shotgun
+  m_EditorClassIdentifier: 
+  UpgradeName: Shotgun Shot
+  UpgradeDescription: Change Weapon to Shotgun Shot
+  ID: 13
+  Cooldown: 0
+  WhenToProc: 0
+  NewWeapon: {fileID: 11400000, guid: 7670315ca26db7a42a56d3a9aa6d96ed, type: 2}
