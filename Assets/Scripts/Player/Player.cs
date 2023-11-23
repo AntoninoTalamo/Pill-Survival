@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] protected bool isActing = false;
     [SerializeField] public GameObject PlayerModel;
     [SerializeField] public Transform AttackOffset;
-    [SerializeField] public EntityBehaviour AttackAbility;
+    [SerializeField] public EntityAttack AttackAbility;
 
     Vector3 AnimationDirection;
     protected Rigidbody rigidbody;
@@ -40,8 +40,8 @@ public class Player : MonoBehaviour
     void Update()
     {
         AttackCooldown.Tick();
-        entity.BehaviourPos = AttackOffset.position;
-        entity.BehaviourRot = PlayerModel.transform.rotation;
+        entity.FacingPos = AttackOffset.position;
+        entity.FacingRot = PlayerModel.transform.rotation;
         if (canMove && !isActing)
         {
             if (playerInput.actions["Attack1"].IsPressed()) Attack();

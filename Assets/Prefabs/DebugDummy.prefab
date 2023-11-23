@@ -144,6 +144,14 @@ PrefabInstance:
       propertyPath: stats.CurrentHP
       value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
+      propertyPath: stats.AttackRate
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
+      propertyPath: stats.AttackSpeed
+      value: -0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
 --- !u!1 &4933911002797459491 stripped

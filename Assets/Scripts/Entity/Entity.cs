@@ -14,8 +14,8 @@ public class Entity : MonoBehaviour
     public bool Dead;
     Cooldown IFrames = new Cooldown();
 
-    [HideInInspector] public Vector3 BehaviourPos;
-    [HideInInspector] public Quaternion BehaviourRot;
+    [HideInInspector] public Vector3 FacingPos;
+    [HideInInspector] public Quaternion FacingRot;
     [HideInInspector] public Vector3 LastHit;
 
     public void Update()
@@ -29,7 +29,7 @@ public class Entity : MonoBehaviour
         if(IFrames.Up())
         {
             ProcOnTakeDamage();
-            IFrames.Set(stats.InvincibleTime * (1 + stats.InvincibleIncrease));  //apply invincibility
+            IFrames.Set(0.025f * (1 + stats.InvincibleIncrease));  //apply invincibility
             float Damage = (E.stats.BaseDamage * (1 + E.stats.DamageIncrease) / (1 + (stats.Armor * 1f)) * Modifier);
             stats.CurrentHP = Mathf.Clamp(stats.CurrentHP - Damage, 0, stats.MaxHP);
             E.HealDamage(Damage * E.stats.LifeSteal); //heal attacker
@@ -89,6 +89,17 @@ public class Entity : MonoBehaviour
         foreach (UpgradeContainer container in Upgrades)
             if (container.Upgrade == Up) return container;
         return null;
+    }
+    public void AssignHitboxes(GameObject root)
+    {
+        //Assign Hitboxes
+        EntityHitbox[] hitboxes = root.GetComponentsInChildren<EntityHitbox>();
+        foreach (EntityHitbox box in hitboxes)
+        {
+            box.entity = this;
+            box.gameObject.tag = "Hitbox_" + Type.ToString();
+            box.Initalize();
+        }
     }
 
 }

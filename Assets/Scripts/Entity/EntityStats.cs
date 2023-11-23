@@ -11,7 +11,7 @@ public class EntityStats
     public float MaxHP = 100f;
     public float CurrentHP = 100f;
     public float BaseDamage = 10f;
-    public float InvincibleTime = 0.1f;
+    public int AttackLevel = 1;
 
     [Header("Unique Stats")]
     public float HPRegeneration = 0f;
@@ -19,8 +19,9 @@ public class EntityStats
     public float Armor = 0f;
     public float DamageIncrease = 0f;
     public float CritChance = 0f;
+    public float AttackRate = 0f;
     public float AttackSpeed = 0f;
-    public float AttackVelocity = 0f;
+    public float AttackSize = 0f;
     public float MoveIncrease = 0f;
     public float Luck = 0f;
     public float InvincibleIncrease = 0f;
@@ -38,8 +39,9 @@ public class EntityStats
         Armor += s.Armor;
         DamageIncrease += s.DamageIncrease;
         CritChance += s.CritChance;
+        AttackRate += s.AttackRate;
         AttackSpeed += s.AttackSpeed;
-        AttackVelocity += s.AttackVelocity;
+        AttackSize += s.AttackSize;
         MoveIncrease += s.MoveIncrease;
         Luck += s.Luck;
         InvincibleIncrease += s.InvincibleIncrease;
@@ -57,15 +59,20 @@ public class EntityStats
         Armor -= s.Armor;
         DamageIncrease -= s.DamageIncrease;
         CritChance -= s.CritChance;
+        AttackRate -= s.AttackRate;
         AttackSpeed -= s.AttackSpeed;
-        AttackVelocity -= s.AttackVelocity;
+        AttackSize -= s.AttackSize;
         MoveIncrease -= s.MoveIncrease;
         Luck -= s.Luck;
         InvincibleIncrease -= s.InvincibleIncrease;
         DodgeChance -= s.DodgeChance;
     }
+    public void LevelUp()
+    {
+        //Increase stats
+    }
     public float GetAttackCooldown(float initial)
     {
-        return initial / (1 + AttackSpeed);
+        return initial / (1 + AttackRate);
     }
 }

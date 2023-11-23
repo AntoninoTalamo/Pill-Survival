@@ -333,12 +333,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
+      propertyPath: stats.AttackRate
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.BaseDamage
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
+      propertyPath: stats.AttackPower
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.AttackSpeed
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
@@ -373,5 +381,5 @@ MonoBehaviour:
   target: {fileID: 0}
   Model: {fileID: 3357936771040006958}
   AttackOffset: {fileID: 1935074884}
-  ModeOfAttack: {fileID: 11400000, guid: e0af6df091a5ddd4485a656a7e294825, type: 2}
+  ModeOfAttack: {fileID: 11400000, guid: 5f55aad9124f95f4792e3e035358f08d, type: 2}
   Range: 10

@@ -9,13 +9,13 @@ public class TurretEnemy : Enemy
     //1 = Attack Player
     [SerializeField] GameObject Model;
     [SerializeField] Transform AttackOffset;
-    [SerializeField] EntityBehaviour ModeOfAttack;
+    [SerializeField] EntityAttack ModeOfAttack;
     [SerializeField] float Range = 20f;
     Cooldown AttackCooldown = new Cooldown();
     protected override void onUpdate()
     {
-        entity.BehaviourPos = AttackOffset.position;
-        entity.BehaviourRot = Model.transform.rotation;
+        entity.FacingPos = AttackOffset.position;
+        entity.FacingRot = Model.transform.rotation;
         switch (State){
             case 0://Idle
                 if (Vector3.Distance(transform.position,target.transform.position) <= Range) State = 1;
