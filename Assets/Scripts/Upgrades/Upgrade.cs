@@ -8,7 +8,7 @@ public abstract class Upgrade : ScriptableObject
     public string UpgradeDescription = "Upgrade Description";
     public int ID = 1;
     public float Cooldown = 0;
-    public enum ProcType {None, OnAttack, OnTakeDamage, OnKill, OnTimer}
+    public enum ProcType {None, OnAttack, OnTakeDamage, OnKill, OnTimer, OnSpawn}
     public ProcType ProcCondition = ProcType.None;
 
     public abstract void Apply(Entity entity);// obtain

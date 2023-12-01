@@ -12,6 +12,11 @@ public class TurretEnemy : Enemy
     [SerializeField] EntityAttack ModeOfAttack;
     [SerializeField] float Range = 20f;
     Cooldown AttackCooldown = new Cooldown();
+
+    protected override void onStart()
+    {
+    }
+
     protected override void onUpdate()
     {
         entity.FacingPos = AttackOffset.position;

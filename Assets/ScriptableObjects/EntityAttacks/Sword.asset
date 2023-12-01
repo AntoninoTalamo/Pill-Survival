@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   ID: 1
-  Cooldown: 0.85
+  Cooldown: 0.75
   AttackObject: {fileID: 5277770613183260132, guid: 33166fd752a3410419b70fca2d9bd052, type: 3}

@@ -8,15 +8,12 @@ public abstract class Enemy : MonoBehaviour
     public Entity entity;
     public GameObject target;
 
-    private void Awake()
+    private void Start()
     {
         entity = GetComponent<Entity>();
         entity.EntityObject = gameObject;
-        target = GameObject.Find("ThePlayer");//placeholder
-    }
-    private void Start()
-    {
-        
+        target = PlayerData.instance.PlayerEntity.EntityObject;
+        onStart();
     }
     private void Update()
     {
@@ -29,6 +26,7 @@ public abstract class Enemy : MonoBehaviour
         
     }
     protected abstract void onUpdate();
+    protected abstract void onStart();
 
     private void OnTriggerEnter(Collider other)
     {

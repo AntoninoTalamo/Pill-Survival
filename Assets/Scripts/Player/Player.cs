@@ -29,6 +29,12 @@ public class Player : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         playerInput = GetComponent<PlayerInput>();
         AttackCooldown.Set(0f);
+        entity = PlayerData.instance.PlayerEntity;
+        entity.EntityObject = this.gameObject;
+    }
+    private void Start()
+    {
+
     }
 
     private void FixedUpdate()

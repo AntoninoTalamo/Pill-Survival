@@ -70,22 +70,23 @@ MonoBehaviour:
     MaxHP: 35
     CurrentHP: 35
     BaseDamage: 8
-    InvincibleTime: 0.02
+    AttackLevel: 1
     HPRegeneration: 0
     LifeSteal: 0
     Armor: 0
     DamageIncrease: 0
     CritChance: 0
+    AttackRate: 0
     AttackSpeed: 0
-    AttackVelocity: 0
+    AttackSize: 0
     MoveIncrease: 0
     Luck: 0
     InvincibleIncrease: 0
     DodgeChance: 0
   Upgrades: []
   Dead: 0
-  BehaviourPos: {x: 0, y: 0, z: 0}
-  BehaviourRot: {x: 0, y: 0, z: 0, w: 0}
+  FacingPos: {x: 0, y: 0, z: 0}
+  FacingRot: {x: 0, y: 0, z: 0, w: 0}
   LastHit: {x: 0, y: 0, z: 0}
 --- !u!136 &2370628448709811476
 CapsuleCollider:

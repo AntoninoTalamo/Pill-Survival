@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class StationaryEnemy : Enemy
 {
+    protected override void onStart()
+    {
+    }
     //literally do nothing
     protected override void onUpdate()
     {

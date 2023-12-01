@@ -67,6 +67,25 @@ public class EntityStats
         InvincibleIncrease -= s.InvincibleIncrease;
         DodgeChance -= s.DodgeChance;
     }
+    public void CopyStats(EntityStats s)
+    {
+        MaxHP = s.MaxHP;
+        CurrentHP = s.MaxHP;
+        BaseDamage = s.BaseDamage;
+
+        HPRegeneration = s.HPRegeneration;
+        LifeSteal = s.LifeSteal;
+        Armor = s.Armor;
+        DamageIncrease = s.DamageIncrease;
+        CritChance = s.CritChance;
+        AttackRate = s.AttackRate;
+        AttackSpeed = s.AttackSpeed;
+        AttackSize = s.AttackSize;
+        MoveIncrease = s.MoveIncrease;
+        Luck = s.Luck;
+        InvincibleIncrease = s.InvincibleIncrease;
+        DodgeChance = s.DodgeChance;
+    }
     public void LevelUp()
     {
         //Increase stats
