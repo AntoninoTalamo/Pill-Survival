@@ -21,10 +21,6 @@ public abstract class Enemy : MonoBehaviour
             Destroy(gameObject);
         onUpdate();
     }
-    private void FixedUpdate()
-    {
-        
-    }
     protected abstract void onUpdate();
     protected abstract void onStart();
 

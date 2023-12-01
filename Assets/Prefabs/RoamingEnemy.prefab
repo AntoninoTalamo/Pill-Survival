@@ -212,11 +212,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.MaxHP
-      value: 35
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.CurrentHP
-      value: 35
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.AttackRate
