@@ -32,15 +32,14 @@ public class Player : MonoBehaviour
         entity = PlayerData.instance.PlayerEntity;
         entity.EntityObject = this.gameObject;
     }
-    private void Start()
-    {
-
-    }
 
     private void FixedUpdate()
     {
-        SetPlayerModelRotation();
-        Move();
+        if (!entity.Dead)
+        {
+            SetPlayerModelRotation();
+            Move();
+        }
     }
 
     void Update()

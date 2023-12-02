@@ -7,6 +7,7 @@ public abstract class Enemy : MonoBehaviour
 {
     public Entity entity;
     public GameObject target;
+    public GameObject EXPDrop;
 
     private void Start()
     {
@@ -17,7 +18,12 @@ public abstract class Enemy : MonoBehaviour
     }
     private void Update()
     {
-        if (entity.Dead)
+        if (entity.Dead && EXPDrop != null)
+        {
+            GameObject xp = Instantiate(EXPDrop);
+            xp.transform.position = this.transform.position;
+        }
+        if (entity.Dead || transform.position.y < -20f)//destroy if dead or out of bounds
             Destroy(gameObject);
         onUpdate();
     }

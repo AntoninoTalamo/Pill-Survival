@@ -81,6 +81,80 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5131915272477809113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6320118398633997528}
+  - component: {fileID: 4507448187168736743}
+  - component: {fileID: 6698250273623376848}
+  - component: {fileID: 6648335927150035167}
+  m_Layer: 8
+  m_Name: Hitbox
+  m_TagString: Hitbox_Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6320118398633997528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5131915272477809113}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 4933911002797459492}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4507448187168736743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5131915272477809113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a1bb78961b2d624586edb4a49f0f812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageModifier: 1
+  DestroyOnUse: 0
+  entity: {fileID: 8920618873285313135}
+  Renderers: []
+--- !u!114 &6698250273623376848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5131915272477809113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc2b84aa52d05341a2efd3dc86a1a55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &6648335927150035167
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5131915272477809113}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2024281470092603403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88,9 +162,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2370628448709811476, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
+      propertyPath: m_Height
+      value: 3.330622
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370628448709811476, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
+      propertyPath: m_Radius
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370628448709811476, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
+      propertyPath: m_Center.y
+      value: 1.6403028
+      objectReference: {fileID: 0}
     - target: {fileID: 6372440293213747240, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: m_Name
-      value: DebugDummy
+      value: GiantEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 6372440293213747247, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: m_RootOrder
@@ -136,17 +222,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6372440294468026509, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372440294468026509, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372440294468026509, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.MaxHP
-      value: 35
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.CurrentHP
-      value: 35
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.AttackRate
       value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
+      propertyPath: stats.BaseDamage
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.AttackSpeed
@@ -157,6 +259,11 @@ PrefabInstance:
 --- !u!1 &4933911002797459491 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6372440293213747240, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
+  m_PrefabInstance: {fileID: 2024281470092603403}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4933911002797459492 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6372440293213747247, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
   m_PrefabInstance: {fileID: 2024281470092603403}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &8920618873285313135 stripped
@@ -175,7 +282,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6372440294468026509, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
   m_PrefabInstance: {fileID: 2024281470092603403}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8685577452087185865
+--- !u!114 &-4167510114107996112
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,9 +291,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4933911002797459491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a319072e6c60fd4d90952c4af6d51c9, type: 3}
+  m_Script: {fileID: 11500000, guid: e7ecac2a04e2e664080249833c4fba6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   entity: {fileID: 8920618873285313135}
   target: {fileID: 0}
-  EXPDrop: {fileID: 2957894902728546868, guid: 3feed23f9ccfe02479529f933df8425e, type: 3}
+  EXPDrop: {fileID: 2957894902728546868, guid: 03cf9c692b688764cb720de4780e9722, type: 3}
+  MoveSpeed: 0.5

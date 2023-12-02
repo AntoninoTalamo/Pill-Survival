@@ -103,7 +103,6 @@ GameObject:
   - component: {fileID: 7432902760338164337}
   - component: {fileID: 7432902760338164336}
   - component: {fileID: 7432902760338164339}
-  - component: {fileID: 6382264628462305337}
   - component: {fileID: 8293586211512052488}
   m_Layer: 6
   m_Name: Player
@@ -187,50 +186,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11cd41a04ae014c45a1f924d18794583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entity: {fileID: 6382264628462305337}
+  entity: {fileID: 0}
   baseMoveSpeed: 1
   canMove: 1
   isActing: 0
   PlayerModel: {fileID: 7432902758907851475}
   AttackOffset: {fileID: 8243005613455689012}
   AttackAbility: {fileID: 11400000, guid: 5f55aad9124f95f4792e3e035358f08d, type: 2}
---- !u!114 &6382264628462305337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7432902760338164341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e421c894a219624b834f3e213c8f9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 1
-  EntityObject: {fileID: 7432902760338164341}
-  stats:
-    Level: 1
-    MaxHP: 100
-    CurrentHP: 100
-    BaseDamage: 10
-    AttackLevel: 1
-    HPRegeneration: 0
-    LifeSteal: 0
-    Armor: 0
-    DamageIncrease: 0
-    CritChance: 0
-    AttackRate: 0
-    AttackSpeed: 0
-    AttackSize: 0
-    MoveIncrease: 0
-    Luck: 0
-    InvincibleIncrease: 0
-    DodgeChance: 0
-  Upgrades: []
-  Dead: 0
-  FacingPos: {x: 0, y: 0, z: 0}
-  FacingRot: {x: 0, y: 0, z: 0, w: 0}
-  LastHit: {x: 0, y: 0, z: 0}
 --- !u!136 &8293586211512052488
 CapsuleCollider:
   m_ObjectHideFlags: 0

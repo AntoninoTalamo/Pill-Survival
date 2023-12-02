@@ -13,23 +13,25 @@ MonoBehaviour:
   m_Name: (4) +GeneralSpeed
   m_EditorClassIdentifier: 
   UpgradeName: +General Speed
-  UpgradeDescription: Increase Move/Attack Speed by 5%
+  UpgradeDescription: Increase Move/Attack Rate by 5%
+  UpgradeIcon: {fileID: 21300000, guid: 75570502cb96fa344a037f3a70814512, type: 3}
   ID: 4
   Cooldown: 0
-  WhenToProc: 0
+  ProcCondition: 0
   statBoosts:
     Level: 0
     MaxHP: 0
     CurrentHP: 0
     BaseDamage: 0
-    InvincibleTime: 0
+    AttackLevel: 1
     HPRegeneration: 0
     LifeSteal: 0
     Armor: 0
     DamageIncrease: 0
     CritChance: 0
-    AttackSpeed: 0.05
-    AttackVelocity: 0
+    AttackRate: 0.05
+    AttackSpeed: 0
+    AttackSize: 0
     MoveIncrease: 0.05
     Luck: 0
     InvincibleIncrease: 0

@@ -334,7 +334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.AttackRate
-      value: -0.5
+      value: -0.75
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.BaseDamage
@@ -379,7 +379,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entity: {fileID: 0}
   target: {fileID: 0}
+  EXPDrop: {fileID: 2957894902728546868, guid: ccc3c8b0e4d07af46aa02d651d33f873, type: 3}
   Model: {fileID: 3357936771040006958}
   AttackOffset: {fileID: 1935074884}
   ModeOfAttack: {fileID: 11400000, guid: 5f55aad9124f95f4792e3e035358f08d, type: 2}
-  Range: 10
+  Range: 15

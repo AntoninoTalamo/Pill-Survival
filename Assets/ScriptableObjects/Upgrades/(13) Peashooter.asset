@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb2d11a0949792f4192bd59ac48e963e, type: 3}
   m_Name: (13) Peashooter
   m_EditorClassIdentifier: 
-  UpgradeName: Shotgun Shot
-  UpgradeDescription: Change Weapon to Shotgun Shot
+  UpgradeName: Peashooter
+  UpgradeDescription: Change Weapon to Peashooter
+  UpgradeIcon: {fileID: 21300000, guid: 9574f0c15b44d85479d804d832c1b7e0, type: 3}
   ID: 13
   Cooldown: 0
   ProcCondition: 0

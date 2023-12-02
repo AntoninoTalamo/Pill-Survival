@@ -6,7 +6,7 @@ public class PlayerData : MonoBehaviour
 {
     public static PlayerData instance { get; private set; }
     public int EXP = 0;
-    public int NextLevelUp = 10;
+    public int NextLevelUp = 5;
     public Entity PlayerEntity;
     public EntityStats DefaultStats;
 
@@ -23,9 +23,24 @@ public class PlayerData : MonoBehaviour
         {
             instance = this;
         }
+        DontDestroyOnLoad(this);
     }
     public void ResetPlayer()
     {
         PlayerEntity.stats.CopyStats(DefaultStats);
+    }
+    public void ApplyEXP(int amount)
+    {
+        EXP += amount;
+        if(EXP >= NextLevelUp)
+        {
+            EXP = 0;
+            NextLevelUp += 8;
+            PlayerEntity.stats.Level++;
+
+            //Prompt the player pick from one of three randomly selected upgrades
+            //GrantUpgrade();
+            UIManager.instance.menuState = UIManager.MenuState.UPGRADESELECT;//placeholder
+        }
     }
 }

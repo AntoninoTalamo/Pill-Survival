@@ -8,6 +8,7 @@ TagManager:
   - Hitbox_Player
   - Hitbox_Enemy
   - Hitbox_Undefined
+  - EXP
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Player
   - Enemy
   - Hitbox
-  - 
+  - EXP
   - 
   - 
   - 

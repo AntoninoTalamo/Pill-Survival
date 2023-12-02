@@ -5,15 +5,16 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
 	public GameObject enemyPrefab;
+	public float Rate = 5f;
 
     public void Start()
     {
-		InvokeRepeating("SpawnRepeating", 5f, 5f);
+		InvokeRepeating("SpawnRepeating", Rate, Rate);
     }
 
 	void SpawnRepeating()
     {
-		CreateEnemiesAroundPoint(5, PlayerData.instance.PlayerEntity.EntityObject.transform.position, 15f);
+		CreateEnemiesAroundPoint(1, PlayerData.instance.PlayerEntity.EntityObject.transform.position, 15f);
     }
 
     public void CreateEnemiesAroundPoint(int num, Vector3 point, float radius)

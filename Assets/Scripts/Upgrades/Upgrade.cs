@@ -6,6 +6,7 @@ public abstract class Upgrade : ScriptableObject
 {
     public string UpgradeName = "An Upgrade";
     public string UpgradeDescription = "Upgrade Description";
+    public Sprite UpgradeIcon;
     public int ID = 1;
     public float Cooldown = 0;
     public enum ProcType {None, OnAttack, OnTakeDamage, OnKill, OnTimer, OnSpawn}

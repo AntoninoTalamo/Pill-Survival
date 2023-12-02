@@ -13,7 +13,7 @@ public class PlayerBars : MonoBehaviour
     void Update()
     {
         float CalcHealth = Mathf.Clamp(PlayerData.instance.PlayerEntity.stats.CurrentHP / PlayerData.instance.PlayerEntity.stats.MaxHP, 0, 1);
-        float CalcEXP = Mathf.Clamp(PlayerData.instance.EXP / PlayerData.instance.NextLevelUp,0,1);
+        float CalcEXP = Mathf.Clamp((float) PlayerData.instance.EXP / PlayerData.instance.NextLevelUp,0,1);
         HealthBar.transform.localScale = new Vector3(CalcHealth, 1, 1);
         EXPBar.transform.localScale = new Vector3(CalcEXP, 1, 1);
         Level.text = PlayerData.instance.PlayerEntity.stats.Level.ToString();

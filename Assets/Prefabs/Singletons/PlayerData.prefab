@@ -48,8 +48,8 @@ MonoBehaviour:
   EntityObject: {fileID: 0}
   stats:
     Level: 1
-    MaxHP: 100
-    CurrentHP: 100
+    MaxHP: 75
+    CurrentHP: 75
     BaseDamage: 10
     AttackLevel: 1
     HPRegeneration: 0
@@ -82,12 +82,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EXP: 0
-  NextLevelUp: 10
-  PlayerEntity: {fileID: 0}
+  NextLevelUp: 5
+  PlayerEntity: {fileID: 1621549437374719140}
   DefaultStats:
     Level: 1
-    MaxHP: 100
-    CurrentHP: 100
+    MaxHP: 75
+    CurrentHP: 75
     BaseDamage: 10
     AttackLevel: 1
     HPRegeneration: 0
