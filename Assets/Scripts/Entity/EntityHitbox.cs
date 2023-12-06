@@ -20,6 +20,6 @@ public class EntityHitbox : MonoBehaviour
     public void ApplyDamage(Entity hit)
     {
         hit.TakeDamage(entity, DamageModifier);
-        if(DestroyOnUse) Destroy(gameObject);
+        if(DestroyOnUse) ObjectPool.instance.PoolObject(this.gameObject);
     }
 }

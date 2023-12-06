@@ -32,7 +32,7 @@ public class Entity : MonoBehaviour
             IFrames.Set(0.025f * (1 + stats.InvincibleIncrease));  //apply invincibility
             float Damage = (E.stats.BaseDamage * (1 + E.stats.DamageIncrease) / (1 + (stats.Armor * 1f)) * Modifier);
             //Crit Chance
-            float crit = Random.Range(0, 1);
+            float crit = Random.Range(0f, 1f);
             if (E.stats.CritChance > crit)
             {
                 Debug.Log("CRIT!");
@@ -40,7 +40,16 @@ public class Entity : MonoBehaviour
             }
             stats.CurrentHP = Mathf.Clamp(stats.CurrentHP - Damage, 0, stats.MaxHP);
             E.HealDamage(Damage * E.stats.LifeSteal); //heal attacker
-            AudioManager.instance.PlaySound(2);//TakeDamage sound
+            if(Type == EntityType.Enemy)
+            {
+                AudioManager.instance.PlaySound(2);//TakeDamage sound
+                GameObject DamageNum = ObjectPool.instance.PullObject("DamageNumber");
+                if(DamageNum != null)
+                {
+                    DamageNum.transform.position = this.transform.position + new Vector3(0, 3, 0);
+                    DamageNum.GetComponent<DamageNumber>().SetNumber(Mathf.RoundToInt(Mathf.RoundToInt(Damage)));
+                }
+            }
             if (stats.CurrentHP <= 0)
             {
                 E.ProcOnKill();
