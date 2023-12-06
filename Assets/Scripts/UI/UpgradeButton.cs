@@ -24,6 +24,6 @@ public class UpgradeButton : MonoBehaviour
     public void OnUpgradeSelected()
     {
         AssignedUpgrade.Apply(PlayerData.instance.PlayerEntity);
-        UIManager.instance.menuState = UIManager.MenuState.IDLE;
+        UIManager.instance.menuState = UIManager.MenuState.GAMEPLAY;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class ObjectPool : Singleton<ObjectPool>
 {
@@ -18,10 +19,6 @@ public class ObjectPool : Singleton<ObjectPool>
     // The container of pooled objects.
     protected GameObject containerObject;
 
-    public void Start()
-    {
-        CreatePool();
-    }
     public void CreatePool()
     {
         containerObject = new GameObject("ObjectPool");
@@ -103,5 +100,16 @@ public class ObjectPool : Singleton<ObjectPool>
         }
 
         Destroy(obj);
+    }
+    void OnEnable()
+    {
+        Debug.Log("OnEnable called");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    // called second
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "Gameplay")
+            CreatePool();
     }
 }

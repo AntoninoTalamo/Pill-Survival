@@ -44,15 +44,18 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        AttackCooldown.Tick();
-        entity.FacingPos = AttackOffset.position;
-        entity.FacingRot = PlayerModel.transform.rotation;
-        if (canMove && !isActing)
+        if (!entity.Dead)
         {
-            if (playerInput.actions["Attack1"].IsPressed()) Attack();
-            if (playerInput.actions["Dodge"].IsPressed()) Dodge();
-        }
+            AttackCooldown.Tick();
+            entity.FacingPos = AttackOffset.position;
+            entity.FacingRot = PlayerModel.transform.rotation;
+            if (canMove && !isActing)
+            {
+                if (playerInput.actions["Attack1"].IsPressed()) Attack();
+                if (playerInput.actions["Dodge"].IsPressed()) Dodge();
+            }
 
+        }
     }
 
     private void Move()

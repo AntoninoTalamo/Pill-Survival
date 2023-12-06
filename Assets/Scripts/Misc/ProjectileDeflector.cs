@@ -9,7 +9,7 @@ public class ProjectileDeflector : MonoBehaviour
         EntityHitbox hit = other.GetComponent<EntityHitbox>();
         if (hit != null)
         {
-            if (hit.DestroyOnUse)
+            if (hit.Deflectable)
                 Destroy(hit.gameObject);
         }
     }

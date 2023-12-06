@@ -14,11 +14,18 @@ public class PlayerData : Singleton<PlayerData>
     private void Start()
     {
         PlayerEntity = GetComponent<Entity>();
+        ResetPlayer();
     }
 
     public void ResetPlayer()
     {
+        //Remove all EXP, Upgrades, and Stat Changes
+        EXP = 0;
+        NextLevelUp = 5;
         PlayerEntity.stats.CopyStats(DefaultStats);
+        PlayerEntity.stats.Level = 1;
+        PlayerEntity.Upgrades.Clear();
+        PlayerEntity.Dead = false;
     }
 
     public void ApplyEXP(int amount)
@@ -29,11 +36,9 @@ public class PlayerData : Singleton<PlayerData>
             EXP = 0;
             NextLevelUp += 8;
             PlayerEntity.stats.Level++;
+            //Prompt the player pick from one of three randomly selected upgrades
             OfferUpgrades();
             AudioManager.instance.PlaySound(5);//Level up sound
-            //Prompt the player pick from one of three randomly selected upgrades
-            //GrantUpgrade();
-            UIManager.instance.menuState = UIManager.MenuState.UPGRADESELECT;//placeholder
         }
     }
     private void OfferUpgrades()
