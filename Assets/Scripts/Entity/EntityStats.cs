@@ -26,6 +26,7 @@ public class EntityStats
     public float Luck = 0f;
     public float InvincibleIncrease = 0f;
     public float DodgeChance = 0f;
+    public int Range = 0;
 
     public void AddStats(EntityStats s)
     {
@@ -46,6 +47,7 @@ public class EntityStats
         Luck += s.Luck;
         InvincibleIncrease += s.InvincibleIncrease;
         DodgeChance += s.DodgeChance;
+        Range += s.Range;
     }
     public void RemoveStats(EntityStats s)
     {
@@ -66,6 +68,7 @@ public class EntityStats
         Luck -= s.Luck;
         InvincibleIncrease -= s.InvincibleIncrease;
         DodgeChance -= s.DodgeChance;
+        Range -= s.Range;
     }
     public void CopyStats(EntityStats s)
     {
@@ -85,6 +88,7 @@ public class EntityStats
         Luck = s.Luck;
         InvincibleIncrease = s.InvincibleIncrease;
         DodgeChance = s.DodgeChance;
+        Range = s.Range;
     }
     public void LevelUp()
     {

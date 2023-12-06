@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645251, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427182, b: 0.5645241, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -419,8 +419,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1659847079}
-  - component: {fileID: 1659847078}
-  - component: {fileID: 1659847081}
   - component: {fileID: 1659847080}
   m_Layer: 0
   m_Name: EnemySpawner
@@ -429,20 +427,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1659847078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659847077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7faa650e2721754fb6d00d2bffe4f58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4933911002797459491, guid: 6d415102838e0f645bc03c02582ba025, type: 3}
-  Rate: 2
 --- !u!4 &1659847079
 Transform:
   m_ObjectHideFlags: 0
@@ -469,22 +453,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7faa650e2721754fb6d00d2bffe4f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 3357936770859461512, guid: 8999c7b4a7e9821458547d47b43b2218, type: 3}
-  Rate: 12
---- !u!114 &1659847081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659847077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7faa650e2721754fb6d00d2bffe4f58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4933911002797459491, guid: 652bf91642cf23d409b297370110aa39, type: 3}
-  Rate: 32
+  enemyPrefabs:
+  - {fileID: 4933911002797459491, guid: 6d415102838e0f645bc03c02582ba025, type: 3}
+  - {fileID: 4933911002797459491, guid: 6d415102838e0f645bc03c02582ba025, type: 3}
+  - {fileID: 3357936770859461512, guid: 8999c7b4a7e9821458547d47b43b2218, type: 3}
+  initialSpawnRate: 5
+  minSpawnRate: 1
+  spawnRateDecrease: 0.1
+  initialNumberOfEnemies: 1
+  maxNumberOfEnemies: 150
+  enemyIncreaseInterval: 30
+  phaseInterval: 60
 --- !u!1 &1800126549
 GameObject:
   m_ObjectHideFlags: 0

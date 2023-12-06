@@ -9,6 +9,10 @@ public class PlayerData : MonoBehaviour
     public int NextLevelUp = 5;
     public Entity PlayerEntity;
     public EntityStats DefaultStats;
+     // List to hold all possible upgrades
+    public List<Upgrade> availableUpgrades = new List<Upgrade>();
+    // Number of upgrades to offer on level up
+    public int upgradesToOffer = 3;
 
     private void Awake()
     {
@@ -24,6 +28,13 @@ public class PlayerData : MonoBehaviour
             instance = this;
         }
         DontDestroyOnLoad(this);
+        InitializeUpgrades();
+    }
+
+    private void InitializeUpgrades()
+    {
+        //availableUpgrades.Add(UpgradeObject);
+
     }
     public void ResetPlayer()
     {
@@ -37,10 +48,24 @@ public class PlayerData : MonoBehaviour
             EXP = 0;
             NextLevelUp += 8;
             PlayerEntity.stats.Level++;
+            OfferUpgrades();
 
             //Prompt the player pick from one of three randomly selected upgrades
             //GrantUpgrade();
             UIManager.instance.menuState = UIManager.MenuState.UPGRADESELECT;//placeholder
+        }
+    }
+    private void OfferUpgrades()
+    {
+        List<Upgrade> upgradesToOfferList = new List<Upgrade>();
+
+        for (int i = 0; i < upgradesToOffer; i++)
+        {
+            if (availableUpgrades.Count > 0)
+            {
+                int randomIndex = Random.Range(0, availableUpgrades.Count);
+                upgradesToOfferList.Add(availableUpgrades[randomIndex]);
+            }
         }
     }
 }
