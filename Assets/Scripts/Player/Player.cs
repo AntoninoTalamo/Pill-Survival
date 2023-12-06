@@ -81,6 +81,7 @@ public class Player : MonoBehaviour
             entity.ProcOnAttack();
             AttackCooldown.Set(entity.stats.GetAttackCooldown(AttackAbility.Cooldown));
             AttackAbility.Execute(entity);
+            SoundManager.PlaySound(SoundManager.Sound.PlayerAttack, Vector3.zero);
         }
     }
 
