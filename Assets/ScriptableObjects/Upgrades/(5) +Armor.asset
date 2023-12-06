@@ -14,23 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpgradeName: +Armor
   UpgradeDescription: Reduce incoming damage by 7.5%
+  UpgradeIcon: {fileID: 21300000, guid: 6f04c31c8fe179545b99e2f533db7813, type: 3}
   ID: 5
   Cooldown: 0
-  WhenToProc: 0
+  ProcCondition: 0
   statBoosts:
     Level: 0
     MaxHP: 0
     CurrentHP: 0
     BaseDamage: 0
-    InvincibleTime: 0
+    AttackLevel: 1
     HPRegeneration: 0
     LifeSteal: 0
     Armor: 0.075
     DamageIncrease: 0
     CritChance: 0
+    AttackRate: 0
     AttackSpeed: 0
-    AttackVelocity: 0
+    AttackSize: 0
     MoveIncrease: 0
     Luck: 0
     InvincibleIncrease: 0
     DodgeChance: 0
+    Range: 0

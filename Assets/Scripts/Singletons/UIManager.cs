@@ -49,4 +49,10 @@ public class UIManager : MonoBehaviour
                 break;
         }
     }
+    public void QueueUpgrades(Upgrade U1, Upgrade U2, Upgrade U3)
+    {
+        UpgradeButtons[0].Assign(U1);
+        UpgradeButtons[1].Assign(U2);
+        UpgradeButtons[2].Assign(U3);
+    }
 }

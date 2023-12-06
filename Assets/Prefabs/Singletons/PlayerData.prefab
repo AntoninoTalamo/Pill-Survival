@@ -64,6 +64,7 @@ MonoBehaviour:
     Luck: 0
     InvincibleIncrease: 0
     DodgeChance: 0
+    Range: 0
   Upgrades: []
   Dead: 0
   FacingPos: {x: 0, y: 0, z: 0}
@@ -102,3 +103,14 @@ MonoBehaviour:
     Luck: 0
     InvincibleIncrease: 0
     DodgeChance: 0
+    Range: 0
+  availableUpgrades:
+  - {fileID: 11400000, guid: 9a9eab10b6226c44280044c140587a40, type: 2}
+  - {fileID: 11400000, guid: 309946128dc971348b385b2f63cc7967, type: 2}
+  - {fileID: 11400000, guid: b7c11e50b3dea5e4e95a5a8a59c8c9eb, type: 2}
+  - {fileID: 11400000, guid: e0c33e4bcce356545af923b92ccfd47f, type: 2}
+  - {fileID: 11400000, guid: 624cb8cb1432ea1438427d8fc1667b3c, type: 2}
+  - {fileID: 11400000, guid: ddf9ddb266e4e9749b34694d4bce4f0d, type: 2}
+  - {fileID: 11400000, guid: 7560f8b91386f384ebe00647d5deac77, type: 2}
+  - {fileID: 11400000, guid: a153695aae2a81343823a2d5c3b9d548, type: 2}
+  - {fileID: 11400000, guid: 31b8e98b7739e77438db21f0342f4721, type: 2}

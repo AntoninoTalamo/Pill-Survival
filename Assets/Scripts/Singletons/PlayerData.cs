@@ -11,8 +11,6 @@ public class PlayerData : MonoBehaviour
     public EntityStats DefaultStats;
      // List to hold all possible upgrades
     public List<Upgrade> availableUpgrades = new List<Upgrade>();
-    // Number of upgrades to offer on level up
-    public int upgradesToOffer = 3;
 
     private void Awake()
     {
@@ -28,18 +26,13 @@ public class PlayerData : MonoBehaviour
             instance = this;
         }
         DontDestroyOnLoad(this);
-        InitializeUpgrades();
     }
 
-    private void InitializeUpgrades()
-    {
-        //availableUpgrades.Add(UpgradeObject);
-
-    }
     public void ResetPlayer()
     {
         PlayerEntity.stats.CopyStats(DefaultStats);
     }
+
     public void ApplyEXP(int amount)
     {
         EXP += amount;
@@ -57,15 +50,9 @@ public class PlayerData : MonoBehaviour
     }
     private void OfferUpgrades()
     {
-        List<Upgrade> upgradesToOfferList = new List<Upgrade>();
-
-        for (int i = 0; i < upgradesToOffer; i++)
-        {
-            if (availableUpgrades.Count > 0)
-            {
-                int randomIndex = Random.Range(0, availableUpgrades.Count);
-                upgradesToOfferList.Add(availableUpgrades[randomIndex]);
-            }
-        }
+        Upgrade U1 = availableUpgrades[Random.Range(0, availableUpgrades.Count)];
+        Upgrade U2 = availableUpgrades[Random.Range(0, availableUpgrades.Count)];
+        Upgrade U3 = availableUpgrades[Random.Range(0, availableUpgrades.Count)];
+        UIManager.instance.QueueUpgrades(U1, U2, U3);
     }
 }
