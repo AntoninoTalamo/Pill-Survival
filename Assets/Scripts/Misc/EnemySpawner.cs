@@ -6,10 +6,10 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
     public float initialSpawnRate = 5f;
-    public float minSpawnRate = 1f; // Minimum spawn rate
-    public float spawnRateDecrease = 0.1f;
+    public float minSpawnRate = 1f;
+    public float spawnRateDecrease = 0.05f; // Smoother decrease
     public int initialNumberOfEnemies = 1;
-    public int maxNumberOfEnemies = 150; // Maximum number of enemies
+    public int maxNumberOfEnemies = 150;
     public int enemyIncreaseInterval = 30;
     public int phaseInterval = 60;
 
@@ -32,9 +32,8 @@ public class EnemySpawner : MonoBehaviour
         spawnWeights = new List<float>();
         for (int i = 0; i < enemyPrefabs.Length; i++)
         {
-            spawnWeights.Add(0f);
+            spawnWeights.Add(1f / enemyPrefabs.Length); // Equal weight initially
         }
-        spawnWeights[0] = 1f; // Start with only the first enemy type
     }
 
     private void Update()
@@ -55,12 +54,10 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < spawnWeights.Count - 1; i++)
         {
-            if (spawnWeights[i] > 0f)
-            {
-                spawnWeights[i] = Mathf.Max(spawnWeights[i] - 0.05f, 0f); // Smoother decrease
-                spawnWeights[i + 1] = Mathf.Min(spawnWeights[i + 1] + 0.05f, 1f); // Smoother increase
-                break;
-            }
+            spawnWeights[i] -= 0.05f; // Decrease smoothly
+            spawnWeights[i] = Mathf.Max(spawnWeights[i], 0f);
+            spawnWeights[i + 1] += 0.05f; // Increase smoothly
+            spawnWeights[i + 1] = Mathf.Min(spawnWeights[i + 1], 1f);
         }
     }
 
@@ -69,8 +66,8 @@ public class EnemySpawner : MonoBehaviour
         CreateEnemiesAroundPoint(currentNumberOfEnemies, PlayerData.instance.PlayerEntity.EntityObject.transform.position, 15f);
         if (currentSpawnRate > minSpawnRate)
         {
+            currentSpawnRate = Mathf.Max(minSpawnRate, currentSpawnRate - spawnRateDecrease);
             CancelInvoke("SpawnRepeating");
-            currentSpawnRate -= spawnRateDecrease;
             InvokeRepeating("SpawnRepeating", currentSpawnRate, currentSpawnRate);
         }
     }
@@ -79,7 +76,6 @@ public class EnemySpawner : MonoBehaviour
     {
         currentNumberOfEnemies = Mathf.Min(currentNumberOfEnemies + 1, maxNumberOfEnemies);
     }
-
     public void CreateEnemiesAroundPoint(int num, Vector3 point, float radius)
     {
         for (int i = 0; i < num; i++)
