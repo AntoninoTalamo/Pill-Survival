@@ -12,17 +12,9 @@ public class UIManager : MonoBehaviour
     public enum MenuState {IDLE, GAMEPLAY, UPGRADESELECT, PAUSE}
     public MenuState menuState = MenuState.IDLE;
 
-    public SoundAudioClip[] soundAudioClipArray;
-    [System.Serializable]
-    public class SoundAudioClip{
-        public SoundManager.Sound sound;
-        public AudioClip audioClip;
-    }
-
     // Start is called before the first frame update
     private void Awake()
     {
-        SoundManager.Initialize();
         // If there is an instance, and it's not me, delete myself.
         if (instance != null && instance != this)
         {

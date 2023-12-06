@@ -42,7 +42,7 @@ public class PlayerData : MonoBehaviour
             NextLevelUp += 8;
             PlayerEntity.stats.Level++;
             OfferUpgrades();
-
+            AudioManager.Instance.PlaySound(5);//Level up sound
             //Prompt the player pick from one of three randomly selected upgrades
             //GrantUpgrade();
             UIManager.instance.menuState = UIManager.MenuState.UPGRADESELECT;//placeholder

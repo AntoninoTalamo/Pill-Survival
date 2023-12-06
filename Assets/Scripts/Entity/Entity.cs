@@ -33,6 +33,7 @@ public class Entity : MonoBehaviour
             float Damage = (E.stats.BaseDamage * (1 + E.stats.DamageIncrease) / (1 + (stats.Armor * 1f)) * Modifier);
             stats.CurrentHP = Mathf.Clamp(stats.CurrentHP - Damage, 0, stats.MaxHP);
             E.HealDamage(Damage * E.stats.LifeSteal); //heal attacker
+            AudioManager.Instance.PlaySound(2);//TakeDamage sound
             if (stats.CurrentHP <= 0)
             {
                 E.ProcOnKill();

@@ -18,6 +18,7 @@ public class ExpDrop : MonoBehaviour
         if(other.tag == "Player")
         {
             PlayerData.instance.ApplyEXP(Amount);
+            AudioManager.Instance.PlaySound(4);//EXP sound
             Destroy(this.gameObject);
         }
     }
