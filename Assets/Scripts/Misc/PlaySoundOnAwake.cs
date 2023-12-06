@@ -7,6 +7,6 @@ public class PlaySoundOnAwake : MonoBehaviour
     public int SoundToPlay = 0;
     private void OnEnable()
     {
-        AudioManager.Instance.PlaySound(0);
+        AudioManager.instance.PlaySound(SoundToPlay);
     }
 }

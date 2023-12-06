@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerData : MonoBehaviour
+public class PlayerData : Singleton<PlayerData>
 {
-    public static PlayerData instance { get; private set; }
     public int EXP = 0;
     public int NextLevelUp = 5;
     public Entity PlayerEntity;
@@ -12,20 +11,9 @@ public class PlayerData : MonoBehaviour
      // List to hold all possible upgrades
     public List<Upgrade> availableUpgrades = new List<Upgrade>();
 
-    private void Awake()
+    private void Start()
     {
-        // If there is an instance, and it's not me, delete myself.
         PlayerEntity = GetComponent<Entity>();
-
-        if (instance != null && instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            instance = this;
-        }
-        DontDestroyOnLoad(this);
     }
 
     public void ResetPlayer()
@@ -42,7 +30,7 @@ public class PlayerData : MonoBehaviour
             NextLevelUp += 8;
             PlayerEntity.stats.Level++;
             OfferUpgrades();
-            AudioManager.Instance.PlaySound(5);//Level up sound
+            AudioManager.instance.PlaySound(5);//Level up sound
             //Prompt the player pick from one of three randomly selected upgrades
             //GrantUpgrade();
             UIManager.instance.menuState = UIManager.MenuState.UPGRADESELECT;//placeholder

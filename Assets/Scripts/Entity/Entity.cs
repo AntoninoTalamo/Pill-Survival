@@ -31,9 +31,16 @@ public class Entity : MonoBehaviour
             ProcOnTakeDamage();
             IFrames.Set(0.025f * (1 + stats.InvincibleIncrease));  //apply invincibility
             float Damage = (E.stats.BaseDamage * (1 + E.stats.DamageIncrease) / (1 + (stats.Armor * 1f)) * Modifier);
+            //Crit Chance
+            float crit = Random.Range(0, 1);
+            if (E.stats.CritChance > crit)
+            {
+                Debug.Log("CRIT!");
+                Damage *= 2f;
+            }
             stats.CurrentHP = Mathf.Clamp(stats.CurrentHP - Damage, 0, stats.MaxHP);
             E.HealDamage(Damage * E.stats.LifeSteal); //heal attacker
-            AudioManager.Instance.PlaySound(2);//TakeDamage sound
+            AudioManager.instance.PlaySound(2);//TakeDamage sound
             if (stats.CurrentHP <= 0)
             {
                 E.ProcOnKill();

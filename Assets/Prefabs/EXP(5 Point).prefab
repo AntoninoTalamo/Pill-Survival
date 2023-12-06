@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2957894902728546865}
   - component: {fileID: 2957894902728546866}
   - component: {fileID: 5564171511053302968}
+  - component: {fileID: 419380240314711292}
   m_Layer: 9
   m_Name: EXP(5 Point)
   m_TagString: EXP
@@ -77,6 +78,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Amount: 5
+--- !u!114 &419380240314711292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2957894902728546868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd1cf266289ab1147926e25321ca4de8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 25
 --- !u!1 &2957894902729724595
 GameObject:
   m_ObjectHideFlags: 0

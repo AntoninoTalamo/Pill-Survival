@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7741575213131127141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7741575213131127139}
+  - component: {fileID: 7741575213131127138}
+  m_Layer: 0
+  m_Name: ObjectPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7741575213131127139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7741575213131127141}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7741575213131127138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7741575213131127141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6453cb62c40d73f4ea205bc584f1fe1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5277770613183260132, guid: 33166fd752a3410419b70fca2d9bd052, type: 3}
+  - {fileID: 2600025210217315757, guid: 1f8204b0290bd614f94fd2d5f1cfc23d, type: 3}
+  - {fileID: 4933911002797459491, guid: 6d415102838e0f645bc03c02582ba025, type: 3}
+  - {fileID: 2957894902728546868, guid: 3feed23f9ccfe02479529f933df8425e, type: 3}
+  - {fileID: 3357936770859461512, guid: 8999c7b4a7e9821458547d47b43b2218, type: 3}
+  - {fileID: 2957894902728546868, guid: ccc3c8b0e4d07af46aa02d651d33f873, type: 3}
+  - {fileID: 4933911002797459491, guid: 652bf91642cf23d409b297370110aa39, type: 3}
+  - {fileID: 2957894902728546868, guid: 03cf9c692b688764cb720de4780e9722, type: 3}
+  amountToBuffer: 01000000fa00000064000000c800000032000000640000003200000064000000
+  defaultBufferAmount: 3
