@@ -20,6 +20,5 @@ public class EntityHitbox : MonoBehaviour
     public void ApplyDamage(Entity hit)
     {
         hit.TakeDamage(entity, DamageModifier);
-        if(Deflectable) ObjectPool.instance.PoolObject(this.gameObject);
     }
 }

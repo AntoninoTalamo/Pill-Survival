@@ -774,7 +774,7 @@ MonoBehaviour:
   - {fileID: 1503338681100597019}
   - {fileID: 2707364562200134324}
   - {fileID: 7795827331821852437}
-  menuState: 1
+  menuState: 0
   timerText: {fileID: 2135673156}
   TimerPanel: {fileID: 177233044}
   GameOverPanel: {fileID: 4502214544549141151}

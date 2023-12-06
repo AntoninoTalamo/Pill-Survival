@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
         if (Hitbox.entity != null)
             mult = 1 + Hitbox.entity.stats.AttackSpeed;
         else
-            Destroy(gameObject);
+            ObjectPool.instance.PoolObject(this.gameObject);
         transform.position = Vector3.MoveTowards(transform.position, Carrot.position, MoveSpeed * mult);
     }
 }

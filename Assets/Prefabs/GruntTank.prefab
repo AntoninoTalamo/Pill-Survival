@@ -91,7 +91,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6320118398633997528}
   - component: {fileID: 4507448187168736743}
-  - component: {fileID: 6698250273623376848}
   - component: {fileID: 6648335927150035167}
   m_Layer: 8
   m_Name: Hitbox
@@ -127,21 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageModifier: 1
-  DestroyOnUse: 0
+  Deflectable: 0
   entity: {fileID: 8920618873285313135}
   Renderers: []
---- !u!114 &6698250273623376848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5131915272477809113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fc2b84aa52d05341a2efd3dc86a1a55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &6648335927150035167
 SphereCollider:
   m_ObjectHideFlags: 0

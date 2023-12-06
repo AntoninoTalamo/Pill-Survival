@@ -25,7 +25,7 @@ public class EnemySpawner : MonoBehaviour
     private int GetEnemyTypeIndex()
     {
         // Gradually introduce new enemy types based on elapsed time
-        int maxIndex = Mathf.FloorToInt(elapsedTime / 60); // New type every 60 seconds
+        int maxIndex = Mathf.FloorToInt(elapsedTime / 40); // New type every 40 seconds
         maxIndex = Mathf.Clamp(maxIndex, 0, EnemyTypes.Length - 1);
 
         // Randomly select from available types
