@@ -13,6 +13,6 @@ public class DestroyAfterSeconds : MonoBehaviour {
     IEnumerator Countdown()
     {
         yield return new WaitForSeconds(seconds);
-        Destroy(gameObject);
+        ObjectPool.instance.PoolObject(this.gameObject);
     }
 }
