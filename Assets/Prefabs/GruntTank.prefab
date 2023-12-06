@@ -171,6 +171,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6372440293213747247, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372440293213747247, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372440293213747247, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.5
       objectReference: {fileID: 0}
@@ -212,15 +220,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.Armor
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.MaxHP
-      value: 100
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.CurrentHP
-      value: 20
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.AttackRate
@@ -276,5 +284,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entity: {fileID: 8920618873285313135}
   target: {fileID: 0}
-  EXPDrop: {fileID: 2957894902728546868, guid: 3feed23f9ccfe02479529f933df8425e, type: 3}
-  MoveSpeed: 1
+  EXPDrop: {fileID: 2957894902728546868, guid: 03cf9c692b688764cb720de4780e9722, type: 3}
+  MoveSpeed: 0.5

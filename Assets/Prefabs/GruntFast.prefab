@@ -164,7 +164,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6372440293213747240, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: m_Name
-      value: GruntBlue
+      value: GruntFast
       objectReference: {fileID: 0}
     - target: {fileID: 6372440293213747247, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: m_RootOrder
@@ -277,4 +277,4 @@ MonoBehaviour:
   entity: {fileID: 8920618873285313135}
   target: {fileID: 0}
   EXPDrop: {fileID: 2957894902728546868, guid: 3feed23f9ccfe02479529f933df8425e, type: 3}
-  MoveSpeed: 1
+  MoveSpeed: 1.75
