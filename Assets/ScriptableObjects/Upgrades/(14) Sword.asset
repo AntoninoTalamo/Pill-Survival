@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: (14) Sword
   m_EditorClassIdentifier: 
   UpgradeName: Sword
-  UpgradeDescription: Change Weapon to Sword (Deflects Bullets)
+  UpgradeDescription: Change Weapon to Sword (Deflects bullets)
   UpgradeIcon: {fileID: 21300000, guid: d3d50e1413df6ac4083627f2f782e63c, type: 3}
   ID: 14
   Cooldown: 0

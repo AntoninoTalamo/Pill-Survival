@@ -31,6 +31,7 @@ public class Entity : MonoBehaviour
             ProcOnTakeDamage();
             IFrames.Set(0.025f * (1 + stats.InvincibleIncrease));  //apply invincibility
             float Damage = (E.stats.BaseDamage * (1 + E.stats.DamageIncrease) / (1 + (stats.Armor * 1f)) * Modifier);
+
             //Crit Chance
             float crit = Random.Range(0f, 1f);
             if (E.stats.CritChance > crit)
@@ -38,8 +39,18 @@ public class Entity : MonoBehaviour
                 Debug.Log("CRIT!");
                 Damage *= 2f;
             }
-            stats.CurrentHP = Mathf.Clamp(stats.CurrentHP - Damage, 0, stats.MaxHP);
-            E.HealDamage(Damage * E.stats.LifeSteal); //heal attacker
+          
+            //Dodge chance
+            float dodge = Random.Range(0f, 1f);
+            if(Mathf.Clamp(stats.DodgeChance,0,0.8f) <= Random.Range(0f, 1f))
+                stats.CurrentHP = Mathf.Clamp(stats.CurrentHP - Damage, 0, stats.MaxHP); //Deal Damage here
+            else
+                Debug.Log("Dodge!");
+
+            //heal attacker
+            E.HealDamage(Damage * E.stats.LifeSteal);
+
+            //Enemy Specific Stuff
             if(Type == EntityType.Enemy)
             {
                 AudioManager.instance.PlaySound(2);//TakeDamage sound
@@ -54,6 +65,9 @@ public class Entity : MonoBehaviour
             {
                 E.ProcOnKill();
                 Dead = true;
+                //Prompt the player to restart if the Player is dead
+                if (Type == EntityType.Player)
+                    UIManager.instance.menuState = UIManager.MenuState.DEAD;
             }
             Debug.Log("Damage Taken: " + Damage);
         }

@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageModifier: 1
-  DestroyOnUse: 0
+  Deflectable: 1
   entity: {fileID: 0}
   Renderers:
   - {fileID: 5335988987163122818}
