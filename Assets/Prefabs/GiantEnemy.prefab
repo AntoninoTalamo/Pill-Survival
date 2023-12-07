@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageModifier: 1
-  Deflectable: 1
+  Deflectable: 0
   entity: {fileID: 8920618873285313135}
   Renderers: []
 --- !u!135 &6648335927150035167

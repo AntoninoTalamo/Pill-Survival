@@ -656,6 +656,7 @@ GameObject:
   - component: {fileID: 1379046118300911785}
   - component: {fileID: 15746311543563818}
   - component: {fileID: 6043835132897537693}
+  - component: {fileID: 3194532263730059920}
   m_Layer: 0
   m_Name: UpgradeSelectionPanel
   m_TagString: Untagged
@@ -724,6 +725,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &3194532263730059920
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2382257877188864314}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c99b307cdf21fb548ac25b0ae6da86e3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2388834933885244774
 GameObject:
   m_ObjectHideFlags: 0

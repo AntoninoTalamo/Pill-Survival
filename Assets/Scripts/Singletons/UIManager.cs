@@ -45,13 +45,13 @@ public class UIManager : Singleton<UIManager>
                 isTimerRunning = false;
                 break;
             case (MenuState.UPGRADESELECT):
-                Time.timeScale = 0f;
+                Time.timeScale = 0.05f;
                 UpgradeSelectionPanel.SetActive(true);
                 GameOverPanel.SetActive(false);
                 isTimerRunning = false;
                 break;
             case (MenuState.DEAD):
-                Time.timeScale = 0f;
+                Time.timeScale = 0.01f;
                 UpgradeSelectionPanel.SetActive(false);
                 GameOverPanel.SetActive(true);
                 isTimerRunning = false;

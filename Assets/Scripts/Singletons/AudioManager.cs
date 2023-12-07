@@ -16,7 +16,8 @@ public class AudioManager : Singleton<AudioManager>
     {
         Debug.Log("Playing a Sound");
         if (id < HardcodedSFX.Count)
-            HardcodedSFX[id].Play();
+            if(!HardcodedSFX[id].isPlaying || HardcodedSFX[id].time > 0.2f)
+                HardcodedSFX[id].Play();
     }
     //play a sound clip passed through a function
     public void PlaySound(AudioClip sound)
