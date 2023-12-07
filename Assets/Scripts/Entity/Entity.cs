@@ -61,6 +61,8 @@ public class Entity : MonoBehaviour
                     DamageNum.GetComponent<DamageNumber>().SetNumber(Mathf.RoundToInt(Mathf.RoundToInt(Damage)));
                 }
             }
+            else
+                AudioManager.instance.PlaySound(3);//Player damage sound
             if (stats.CurrentHP <= 0)
             {
                 E.ProcOnKill();

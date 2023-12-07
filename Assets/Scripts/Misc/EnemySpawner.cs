@@ -19,13 +19,14 @@ public class EnemySpawner : MonoBehaviour
     {
         elapsedTime += rate;
         int enemyTypeIndex = GetEnemyTypeIndex();
-        CreateEnemiesAroundPoint(1, PlayerData.instance.PlayerEntity.EntityObject.transform.position, 15f, enemyTypeIndex);
+        //Every minute double the enemy count
+        CreateEnemiesAroundPoint(1 + Mathf.FloorToInt(elapsedTime / 60), PlayerData.instance.PlayerEntity.EntityObject.transform.position, 15f, enemyTypeIndex);
     }
 
     private int GetEnemyTypeIndex()
     {
         // Gradually introduce new enemy types based on elapsed time
-        int maxIndex = Mathf.FloorToInt(elapsedTime / 40); // New type every 40 seconds
+        int maxIndex = Mathf.FloorToInt(elapsedTime / 30); // New type every 30 seconds
         maxIndex = Mathf.Clamp(maxIndex, 0, EnemyTypes.Length - 1);
 
         // Randomly select from available types

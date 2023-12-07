@@ -8,6 +8,7 @@ public class AudioManager : Singleton<AudioManager>
     [Header("Inscribed")]
     public List<AudioSource> HardcodedSFX = new List<AudioSource>();//predetermained sounds
     public AudioSource FlexibleSFX;//audio source for passing in audio clips
+    public AudioSource Music;//Music
     // Start is called before the first frame update
 
     //play a preallocated sound

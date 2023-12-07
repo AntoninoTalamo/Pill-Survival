@@ -159,11 +159,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6372440293213747247, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6372440293213747247, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6372440293213747247, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -211,11 +211,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.MaxHP
-      value: 500
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.CurrentHP
-      value: 500
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.AttackRate

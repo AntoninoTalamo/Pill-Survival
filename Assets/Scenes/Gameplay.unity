@@ -419,7 +419,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1659847079}
-  - component: {fileID: 1659847080}
   - component: {fileID: 1659847078}
   m_Layer: 0
   m_Name: EnemySpawner
@@ -445,8 +444,8 @@ MonoBehaviour:
   - {fileID: 4933911002797459491, guid: 6b71086a55089b64782135b4fb1651fa, type: 3}
   - {fileID: 4933911002797459491, guid: 30b4807dbc05d1349bcdc56b4b0fe46e, type: 3}
   - {fileID: 4933911002797459491, guid: 84e94f1efa3000d429807c8baa4ed91d, type: 3}
-  - {fileID: 4933911002797459491, guid: 652bf91642cf23d409b297370110aa39, type: 3}
   - {fileID: 3357936770859461512, guid: 8999c7b4a7e9821458547d47b43b2218, type: 3}
+  - {fileID: 4933911002797459491, guid: 652bf91642cf23d409b297370110aa39, type: 3}
   StartRate: 0.5
 --- !u!4 &1659847079
 Transform:
@@ -462,20 +461,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1659847080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659847077}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7faa650e2721754fb6d00d2bffe4f58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyToSpawn: {fileID: 0}
-  Rate: 5
 --- !u!1 &1800126549
 GameObject:
   m_ObjectHideFlags: 0

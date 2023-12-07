@@ -222,12 +222,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
+      propertyPath: stats.Armor
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.MaxHP
-      value: 100
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.CurrentHP
-      value: 100
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.AttackRate

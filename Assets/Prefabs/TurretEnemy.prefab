@@ -286,7 +286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6372440293213747240, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: m_Name
-      value: DebugTurret Variant
+      value: TurretEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 6372440293213747247, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: m_RootOrder
@@ -333,8 +333,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
+      propertyPath: stats.MaxHP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
+      propertyPath: stats.CurrentHP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.AttackRate
-      value: -0.75
+      value: -0.85
       objectReference: {fileID: 0}
     - target: {fileID: 7483811461498106468, guid: 44aeaa85a01fbbe4b9818b1ef418ffec, type: 3}
       propertyPath: stats.BaseDamage

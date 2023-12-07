@@ -11,5 +11,6 @@ public class GameManager : Singleton<GameManager>
         PlayerData.instance.ResetPlayer();
         UIManager.instance.ResetTimer();
         UIManager.instance.menuState = UIManager.MenuState.GAMEPLAY;
+        AudioManager.instance.Music.Play();
     }
 }

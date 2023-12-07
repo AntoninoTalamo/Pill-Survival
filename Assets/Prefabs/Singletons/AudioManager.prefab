@@ -981,6 +981,7 @@ MonoBehaviour:
   - {fileID: 685761705266825447}
   - {fileID: 685761705232105811}
   FlexibleSFX: {fileID: 685761704415953294}
+  Music: {fileID: 685761706071474215}
 --- !u!1 &685761705925924886
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,9 +1150,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: df0d9b8c92cbf974dbd951038dfaf882, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bc7ce387b1babcc48a71f5a009dfdfbc, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.75
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
